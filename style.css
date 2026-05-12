@@ -538,7 +538,7 @@ main {
             border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
             border: 4px solid #000;
                 }        
-                &::before {
+                /* &::before {
                     content: "";
                     position: absolute;
                     top: 0; 
@@ -548,7 +548,7 @@ main {
                      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
                     background-color: #f4b9b9;
                     z-index: -10;
-                }  
+                }   */
         }
     }
 }
