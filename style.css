@@ -19,6 +19,10 @@ img {
       color: #86100e;
 */
 
+
+
+/* ---------------------------------- */
+
 body {
     margin: auto;
     width: 100%;
@@ -43,7 +47,7 @@ body {
 header {
     width: 100%;
     margin: auto;
-    height: 80px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;    
@@ -54,29 +58,21 @@ header {
     text-align: center;
     position: relative;
     padding: 5px;
+    margin-bottom: 77px;
     .logo {
+        width: 100%;
         height: 100%;
         margin: auto;
-        font-size: 2rem;
-        position: relative;
         display: flex;
         justify-content: center;
-        align-items: center;
-        span {
-            position: absolute;
-            font-size: 2.6rem;
-            &:first-child {
-                right: 20px;
-            }
-            &:nth-child(2) {
-                right: 0;
-                left: 0;
-                bottom: 25px;
-                font-size: 1.3rem;
-            }
-            &:nth-child(3) {
-                left: 25px;
-            }
+        align-items: start;
+        align-content: start;
+        img {
+            position: relative;
+            bottom: 75px;
+            width: 160px;
+            object-fit: cover;
+            filter: drop-shadow(3px 5px 0px #fff);
         }
     }
 }
@@ -530,26 +526,67 @@ main {
                   &:first-child {
                     position: relative;
                  }
+                 &:nth-child(2) {
+                    position: static;
+                 }
                 img {
                     width: 100%;
                     height: 300px;
                     object-fit: cover;
                     /* El secreto: radios complejos (8 valores) */
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            border: 4px solid #000;
+                   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+                    border: 4px solid #000;
+                    box-shadow: -2px -10px 3px 6px #f4b9b9;
+
                 }        
-                /* &::before {
-                    content: "";
-                    position: absolute;
-                    top: 0; 
-                    right: 10px;
+                blockquote {
+                    border-left: 4px solid #86100e;
+                    padding-left: 7px;
+                }
+
+                .donation-item--option {
                     width: 80%;
-                    height: 310px;
-                     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-                    background-color: #f4b9b9;
-                    z-index: -10;
-                }   */
+                    height: auto;
+                    text-align: center;
+                    margin: 25px auto;
+                    box-shadow: 0px 1px 6px 5px #00000011;
+                    padding: 7px;
+                    font-family: "Playfair Display", serif;
+                    i {
+                        font-size: 3rem;
+                    }
+                    h3.sub-titulo {
+                        font-size: 1.7rem;
+                         font-family: "Great Vibes", cursive;
+                         margin: 10px auto;
+                    }
+                    a {
+                        display: block;
+                        width: fit-content;
+                         margin: 9px auto;
+                         padding-right: 4px;
+                         text-decoration: none;
+                         color: #000;
+                         border: 2px solid #25d366;
+                         border-radius: 5px;
+                         transition: box-shadow .5s;
+                         i {
+                            font-size: 1.4rem;
+                            background-color: #25d366;
+                            color: #fff;
+                            display: inline-block;
+                            margin-right: 5px;
+                            height: 100%;
+                            padding: 5px;
+                         }
+                         &:hover {
+                            box-shadow: 0px 0px 5px 5px #25d366;
+                         }
+                    }
+                }
         }
     }
 }
 }
+
+/*pago de servicio con códigos CIE */
