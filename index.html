@@ -10,10 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Pinyon+Script&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <header>
         <div class="logo">
             <img src="img/logo.png" alt="">
+            <div class="flower flower1"></div>
+            <div class="flower flower2"></div>
         </div>
     </header>
 
@@ -21,21 +22,23 @@
     <main>
         <section class="banner__initial">
             <div class="banner__initial--img">
-                <img src="img/banner.jpg" alt="">
-                <img src="img/banner.jpg" alt="">
-                <img src="img/banner.jpg" alt="">
+                <img class="Bimg" src="img/banner.jpg" alt="">
+                <img class="Bimg" src="img/banner.jpg" alt="">
+                <img class="Bimg" src="img/banner.jpg" alt="">
             <!-- <div class="bannner__initial--img--text">
                 <span>Mario</span>
                 <span>y</span>
                 <span>Damaris</span>
             </div> -->
+              <div class="flower flower1"></div>
+            <div class="flower flower2"></div>
             <div class="date">
                 <p class="texto">27 . 09 . 26</p>
                 <img src="img/10578806.png" alt="">
             </div>
             </div>
             <div class="banner__initial--txt">
-                <p class="texto">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque soluta voluptates, illo maxime sed nobis aperiam repudiandae amet doloremque possimus!"</p>
+                <p class="texto">"Así que ya no son dos, sino una sola carne. Por lo tanto, lo que Dios ha unido, que no lo separe ningún hombre." <br> (Mateo 19:6)</p>
                 <div class="countdown-container">
                     <h1 class="max-titulo">Falta poco para el gran día:</h1>
                   <div id="countdown">
@@ -58,9 +61,13 @@
         </div>
               </div>
              <div class="button__confirmation">
-                <a href="">Confirmar asistencia</a>
+                <a href="#donation">Confirmar asistencia</a>
              </div>
              <div class="parents">
+                <div class="sheet flowers1"></div>
+                <div class="sheet flowers2"></div>
+                <div class="sheet flowers3"></div>
+                <div class="sheet flowers4"></div>
                 <div class="parents--item">
                     <h2 class="titulo">Padres de Mario</h2>
                     <p class="texto">mario álvarez gómez</p>
@@ -78,7 +85,6 @@
         <section class="winner__info">
             <div class="winner__info--container">
                 <div class="winner__info-item winner__img">
-                    
                 </div>
                  <div class="winner__info-item winner__txt">
                     <h2 class="titulo">Lorem, ipsum dolor.</h2>
@@ -105,6 +111,8 @@
                 <h2 class="titulo">Programa del día</h2>
                <div class="program--container">
                 <div class="program-item">
+                    <div class="flower flowers1"></div>
+                    <div class="flower flowers2"></div>
                     <img src="img/pareja2.jpg" alt="">
                 </div>
                 <div class="program-item">
@@ -158,7 +166,7 @@
                </div>      
         </section>
 
-        <section class="donation">
+        <section class="donation" id="donation">
             <h2 class="titulo">¿Deseas hacernos un regalo?</h2>
            <div class="donation__container">
             <div class="donation-item">
@@ -166,32 +174,58 @@
             </div>
             <div class="donation-item">
                 <blockquote>
-                    <p class="texto">"lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+                    <p class="texto"><cite>"¡Gracias por acompañarnos en el inicio de esta aventura! Su presencia y cariño son el regalo más grande que podemos recibir.
+Para quienes deseen obsequiarnos algo y les sea más cómodo hacerlo así, habilitamos esta opción. De igual forma, Nosotros amamos los detalles en especie y los recibiremos con muchísima ilusión el día de la boda. Sepan que su compañía ya llena nuestro corazón por completo."</cite></p>
                 </blockquote>
-                <div class="donation-item--option">
-                        <i class="fa-solid fa-envelope"></i>
-                        <h3 class="sub-titulo">Lluvia de sobres</h3>
-                        <p class="texto">Lorem ipsum dolor sit amet.</p>
-                </div>
-                <div class="donation-item--option">
-                        <i class="fa-solid fa-money-bill-transfer"></i>
-                        <h3 class="sub-titulo">Donación volunraria</h3>
-                        <p class="texto">Lorem ipsum dolor sit amet.</p>
-                </div>
-                <div class="donation-item--option">
-                        <i class="fa-solid fa-people-arrows"></i>
-                        <h3 class="sub-titulo">Escribenos</h3>
-                        <p class="texto">Lorem ipsum dolor sit amet.</p>
-                        <a href=""><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
-                </div>
             </div>
            </div>
         </section>
 
         <section class="invitation">
-            
+            <h2 class="titulo">¡Nos encantaría contar con tu asistencia!</h2>
+              <div class="rsvp-container">
+  <h2>Confirmar Asistencia</h2>
+  
+  <!-- Paso 1: Buscador -->
+  <div id="paso-busqueda">
+    <p>INGRESA EL CÓDIGO DE TU INVITACIÓN:</p>
+    <div class="search-box">
+      <input type="text" id="input-busqueda" placeholder="Ej: 1234...">
+      <button id="btn-buscar">Buscar</button>
+    </div>
+    <div id="resultados-busqueda"></div>
+  </div>
+
+  <!-- Paso 2: Formulario de Confirmación (Oculto al inicio) -->
+  <div id="paso-confirmacion" style="display: none;">
+    <h3 id="txt-familia"></h3>
+    <p id="txt-invitado-principal"></p>
+    
+    <form id="form-rsvp">
+      <input type="hidden" id="input-fila">
+      
+      <label>¿Podrás asistir?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="asistira" value="Si" checked> ¡Allí estaré!</label>
+        <label><input type="radio" name="asistira" value="No"> Lamentablemente no</label>
+      </div>
+
+      <div id="seccion-pases">
+        <label for="select-pases">Confirmar cantidad de asistentes:</label>
+        <select id="select-pases">
+          <!-- Se llena dinámicamente -->
+        </select>
+      </div>
+
+      <button type="submit" id="btn-enviar">Confirmar mi lugar</button>
+    </form>
+  </div>
+  
+  <div id="mensaje-final" style="display:none;"></div>
+</div>
         </section>
     </main>
         <script src="script.js"></script>   
+        <script src="check.js"></script>
 </body>
 </html>
