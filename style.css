@@ -371,7 +371,7 @@ main {
             align-self: center;
         }
         .winner__img {
-            background-image: url("img/pareja.jpg");
+            background-image: url("img/banner2.jpeg");
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -469,11 +469,13 @@ main {
     .program {
         width: 100%;
         margin: auto;
+        margin-bottom: 20px;
         height: auto;
         gap: 20px;
         .titulo {
             font-family: "Great Vibes", cursive;
             font-size: 2.5rem;
+            margin-bottom: 20px;
             text-align: center;
             color: #86100e;
         }
@@ -488,22 +490,60 @@ main {
             flex-wrap: wrap;
             gap: 20px;
             .program-item:first-child {
-                               --s: 10px; /* control the size */
-                padding: var(--s);
-                border: calc(2*var(--s)) solid #0000;
-                outline: 1px solid #000;
-                outline-offset: calc(-1*var(--s));
-                background: conic-gradient(from 90deg at 1px 1px,#0000 25%,#000 0);
                 position: relative;
+                outline: 15px solid #ffffff;
                 display: block;
-                background-image: url("img/pareja2.jpg");
+                background-image: url("img/tablero-madera-fondo_1339-5418.avif");
                 background-size: cover;
                 background-repeat: no-repeat;
-                background-position: center left;
-                background-attachment: fixed;
-                width: 100%;
-                max-width: 400px;
-                height: 400px;
+                background-position: center;
+                background-attachment:scroll;
+                width: 90%;
+                max-width: 600px;
+                height: 600px;
+                margin: auto;
+                img {
+                    width: 140px;
+                    height: 100px;
+                    outline: 5px solid #ffffff;
+                    object-position: center;
+                    position: absolute;
+                    &:first-child {
+                        top: 10px;
+                        right: 15px;
+                        transform: rotate(20deg);
+                    }
+                    &:nth-child(2) {
+                        top: 90px;
+                        left: 10px;
+                        transform: rotate(-10deg);
+                    }
+                       &:nth-child(3) {
+                        top: 190px;
+                        right: 0;
+                        transform: rotate(15deg);
+                        object-position: top;
+                    }
+                       &:nth-child(4) {
+                        top: 270px;
+                        left: 20px;
+                        transform: rotate(4deg);
+                    }
+                      &:nth-child(5) {
+                        bottom: 110px;
+                        right: 20px;
+                        height: 130px;
+                        object-position: top;
+                        transform: rotate(-12deg);
+                    }
+                         &:nth-child(6) {
+                        bottom: 10px;
+                        left: 20px;
+                        height: 120px;
+                        object-position: center;
+                        transform: rotate(20deg);
+                    }
+                }
             }
             .program-item {
                  width: 100%;
