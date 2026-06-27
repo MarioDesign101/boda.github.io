@@ -22,9 +22,9 @@
     <main>
         <section class="banner__initial">
             <div class="banner__initial--img">
-                <img class="Bimg" src="img/banner.jpeg" alt="">
-                <img class="Bimg" src="img/banner.jpeg" alt="">
-                <img class="Bimg" src="img/banner.jpeg" alt="">
+          <div class="Bimg"></div>
+          <div class="Bimg"></div>
+          <div class="Bimg"></div>
             <!-- <div class="bannner__initial--img--text">
                 <span>Mario</span>
                 <span>y</span>
@@ -174,13 +174,23 @@
             <h2 class="titulo">¿Deseas hacernos un regalo?</h2>
            <div class="donation__container">
             <div class="donation-item">
-                <img src="img/image_3.jpeg" alt="">
+               <div class="mark-photo">
+                <div class="item-photo">
+                     <img src="img/image_3.jpeg" alt="">
+                </div>
+               </div>
             </div>
             <div class="donation-item">
                 <blockquote>
                     <p class="texto"><cite>"¡Gracias por acompañarnos en el inicio de esta aventura! Su presencia y cariño son el regalo más grande que podemos recibir.
 Para quienes deseen obsequiarnos algo y les sea más cómodo hacerlo así, habilitamos esta opción. De igual forma, Nosotros amamos los detalles en especie y los recibiremos con muchísima ilusión el día de la boda. Sepan que su compañía ya llena nuestro corazón por completo."</cite></p>
                 <!-- ventana modal de más información -->
+                <button class="modalWindow" id="openModal">Obsequio con Cariño</button>
+          <dialog id="miModal">
+              <h2 class="titulo">¿Deseas hacer un regalo?</h2>
+              <p class="texto">Este mensaje está dentro de una etiqueta <code>&lt;dialog&gt;</code>. Es genial porque maneja la accesibilidad y el enfoque del teclado automáticamente.</p>
+               <button class="btn-cerrar texto" id="closeModal">Cerrar</button>
+           </dialog>
                 </blockquote>
             </div>
            </div>
@@ -232,5 +242,6 @@ Para quienes deseen obsequiarnos algo y les sea más cómodo hacerlo así, habil
     </main>
         <script src="script.js"></script>   
         <script src="check.js"></script>
+        <script src="modal.js"></script>
 </body>
 </html>

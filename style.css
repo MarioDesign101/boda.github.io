@@ -16,6 +16,16 @@ img {
     display: block;
     object-fit: cover;
 }
+  @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
 
 /*  font-family: "Playfair Display", serif;
     font-family: "Great Vibes", cursive;
@@ -60,7 +70,7 @@ body {
 
 .texto {
     font-family: "Playfair Display", serif;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.5;
     color: #000;
 }
@@ -148,20 +158,25 @@ main {
             }
 
             .Bimg {
-                width: 60px;
+                background-image: url('img/banner.jpeg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
                 height: 400px;
             }
             .Bimg:first-child {
-               object-position: left;
+               width: 30px;
+               background-position: -135px, 1px;
             }
             .Bimg:nth-child(2) {
                 object-position: center;
                 align-self: start;
                 height: 450px;
-                width: 120px;
+                width: 180px;
             }
             .Bimg:nth-child(3) {
-                object-position: right;
+                width: 30px;
+                background-position:  -350px, 1px;
             }
             .bannner__initial--img--text {
                 position: absolute;
@@ -665,26 +680,91 @@ main {
                 width: 100%;
                 height: auto;
                 padding: 10px;
+                .mark-photo {
+                    padding: 10px;
+                    background: transparent;
+                    /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 
+                    0 5px 15px rgba(0, 0, 0, 0.2); */
+                    transition: transform 0.3s ease;
+                    &:hover {
+                        transform: scale(1.02);
+                    }
+                    .item-photo {
+                        background-color: #ffffff;
+                        border: 5px solid #2c1d11;   
+                        outline: 3px solid #b89742;
+                        outline-offset: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        img {
+                            display: block;
+                             max-width: 100%;
+                            height: auto;
+                            box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+                        }
+                    }
+                }
                   &:first-child {
                     position: relative;
                  }
                  &:nth-child(2) {
                     position: static;
-                 }
-                img {
-                    width: 100%;
-                    height: 300px;
-                    object-fit: cover;
-                    /* El secreto: radios complejos (8 valores) */
-                   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-                    border: 4px solid #000;
-                    box-shadow: -2px -10px 3px 6px #f4b9b9;
-
-                }        
+                 }  
                 blockquote {
                     border-left: 4px solid #86100e;
                     padding-left: 7px;
-                 
+                    .modalWindow {
+                        border: none;   
+                        padding: 10px 16px;
+                        text-align: left;
+                        background-color: transparent;
+                        border: 1px solid #86100e;
+                        display: block;
+                        margin: 17px 0;
+                        font-family: "Playfair Display", serif;
+                        text-transform: uppercase;
+                        color: #86100e;
+                        font-size: 1rem;
+                        letter-spacing: 2px;
+                        transition: background-color .3s;
+                        &:hover {
+                            background-color: #86100e;
+                            color: #f5ebe0;
+                        }
+                    }     
+            dialog{   
+            margin: auto;        
+            padding: 24px;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 450px;
+            /* Animación de entrada suave */
+            animation: aparecer 0.3s ease forwards;
+            background-color: #f4b9b9;
+            color: #343230;
+        &::backdrop {
+             background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px); 
+        }
+        p {
+            text-align: center;
+        }
+        .btn-cerrar {
+            display: block;
+            margin: 19px auto;
+            padding: 3px 13px;
+            background-color: #86100e;
+            border-radius: 5px;
+            border: none;
+            color: #f5ebe0;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+        }                    
                 }
         }
     }
@@ -910,847 +990,129 @@ main {
 
 /*pago de servicio con códigos CIE */
 
- @media screen and (min-width: 768px) {
- main {
-    .banner__initial {
-        margin-bottom: 100px;
-        .banner__initial--img {
-            width: 40%;
-            height: auto;
-            img {
-                width: 25%;
-                height: 650px;
-            }
-            img:first-child {
-               object-position: left;
-            }
-            img:nth-child(2) {
-                object-position: center;
-                align-self: start;
-                height: 750px;
-                width: 120px;
-            }
-            img:nth-child(3) {
-                object-position: right;
-            }
-            .bannner__initial--img--text {
-                position: absolute;
-                font-family: "Great Vibes", cursive;
-                width: 100%;
-                span {
-                    display: block;
-                    font-size: 3rem;
-                    color: #fff;
-                    text-shadow: 0 0 10px #000;
-                    text-align: center;
-                    opacity: 1;
-                    transition: all 0.3s ease;
-                }
-            }
-            .date {
-                display: block;
-                width: 100%;
-                margin: auto;
-                text-align: center;
-                .texto {
-                    font-size: 2rem;
-                }
-                img {
-                    width: 250px;
-                    height: 20px;
-                    margin: auto;
-                }
-            }
+ @media screen and (min-width: 360px) {
+  header {
+    .logo {
+        img {
+            width: 180px;
         }
-        .banner__initial--txt {
-            width: 40%;
-            .texto {
-                font-size: 1.2rem;
-                text-align: center;
-                font-family: "Playfair Display", serif;
-                text-transform: uppercase;
-                line-height: 30px;
-            }
-
+        .flower1 {
+            left: 20px;
+        }
+        .flower2 {
+            right: 20px;
         }
     }
+}
 
-    .winner__info {
-        margin-bottom: 100px;
-      .winner__info--container {
-        .winner__info-item {
-            width: 48%;
-            height: auto;
-            align-self: center;
-            align-items: stretch;
+main {
+    margin-top: 100px;
+    .banner__initial {
+        .banner__initial--img {
+            .flower1 {
+                left: 0;
+            }
+            .flower2 {
+                right: 0;
+            }
+            .Bimg:first-child {
+               width: 30px;
+               background-position: -135px, 1px;
+            }
+            .Bimg:nth-child(2) {
+                object-position: center;
+                align-self: start;
+                height: 450px;
+                width: 220px;
+            }
+            .Bimg:nth-child(3) {
+                width: 30px;
+                background-position:  -370px, 1px;
+            }
         }
-        .winner__img {
-            background-position: 160px;
-            width: 48%;
-            height: 700px;
-            order: 2;
-        }
-        .winner__txt {
-           
-        }
-      }
+    
     }
 
     .program {
-            margin-bottom: 100px;
         .program--container {
-            .program-item {
-                 width: 100%;
-                 img {
-                max-width: 400px;
-                max-height: 400px;
-                margin: auto;
-                 }
-                 .program-list {
-                    width: 100%;
-                    height: auto;
-                    margin: auto;
-                    display: flex;
-                    flex-direction: column;
-
-                    justify-content: center;
-                    align-items: center;
-                    align-content: center;
-                    .list-item {
-                        padding: 10px 15px 10px 15px;
-                        width: 80%;
-                        height: auto;
-                        border-right: 1px solid #00000084;
-                        text-align: right;
-                        position: relative;
-                        i {
-                            font-size: 3.5rem;
-                            color: #000;
-                            text-align: right;
-                            margin: 0;
-                        }
-                        &::before {
-                            content: "";
-                            position: absolute;
-                            top: 0; 
-                           right: -3.7px;
-                            height: 7px;
-                            width: 7px;
-                            border-radius: 100%;
-                            background-color: #000;
-                        }
-                    }
-                 }
-                 .program-item--buttom {
-                    width: 100%;
-                    height: auto;
-                    margin: auto;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    align-content: center;
-                    margin-top: 17px;
-                    a {
-                     border: 2px solid #86100e;
-                     text-decoration: none;
-                     text-transform: uppercase;
-                     letter-spacing: 2px;
-                    color: #000;
-                    font-size: 1rem;
-                    padding: 5px;
-                    transition: all 1s ease;
-                    &:hover {
-                        background-color: #86100e;
-                        color: #fff;
-                    }
-            }
-             i {
-                        font-size: 1rem;   
-                        background: #86100e;
-                        color: #fff;
-                        padding: 8px 5px;
-                    }
-        }
-    }
-}
-}
-
-    .donation {
-        width: 100%;
-        height: auto;
-        margin: 20px auto;
-            .titulo {
-                font-size: 2.5rem;
-                text-align: center;
-                color: #86100e;
-                margin-bottom: 15px;
-            }
-        .donation__container{
-            width: 100%;
-            .donation-item {
-                width: 48%;
-                height: auto;
-                padding: 10px;
-                  &:first-child {
-                    position: relative;
-                 }
-                 &:nth-child(2) {
-                    position: static;
-                 }
+            .program-item:first-child {
                 img {
-                    width: 100%;
-                    height: 300px;
-                    object-fit: cover;
-                    /* El secreto: radios complejos (8 valores) */
-                   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-                    border: 4px solid #000;
-                    box-shadow: -2px -10px 3px 6px #f4b9b9;
+                    width: 180px;
+                    height: 110px;
 
-                }        
-                blockquote {
-                    border-left: 4px solid #86100e;
-                    padding-left: 7px;
-                }
-        }
-    }
-}
-
-.invitation {
-    width: 100%;
-    margin: auto;
-    height: auto;
-    padding: 7px;
-    .titulo {
-        font-family: "Great Vibes", cursive;
-        font-size: 2.3rem;
-        text-align: center;
-        color: #86100e;
-    }
-    .rsvp-container {
-        margin: 20px auto;
-        text-align: center;
-        border: 2px solid #86100e;
-        border-style: dashed;
-        padding: 7px;
-        h2 {
-            font-family: "Great Vibes", cursive;
-             
-            letter-spacing: 2px;
-            font-size: 1.7rem;
-            color: #a06161;
-            margin-bottom: 10px;
-        }
-      #paso-busqueda {
-        p {
-            font-family: "Playfair Display", serif;
-            font-size: 1.1rem;
-            color: #000;
-             line-height: 28px;
-             margin-bottom: 15px;   
-         }
-
-      .search-box {
-            width: 80%;
-            height: auto;
-            margin: auto;
-            input {
-                width: 100%;
-                padding: 5px 10px;
-                background-color: #f5ebe0;
-                border: none;
-                border-bottom: 2px solid #86100e;
-                text-transform: uppercase;
-                color: #000;
-                font-family: "Playfair Display", serif;
-                margin-bottom: 15px;
-                transition: all 0.3s ease;
-                &:focus {
-                        outline: none;
-                        border-bottom-color: #f4b9b9;
+                      &:nth-child(5) {
+                        bottom: 110px;
+                        right: 20px;
+                        height: 130px;
+                        object-position: 0px -40px;
+                        transform: rotate(-12deg);
                     }
-             }
-             button {
-                padding: 5px 10px;
-                text-decoration: none;
-                color: #86100e;
-                border:1px solid #86100e; 
-                background-color: transparent;
-                text-transform: uppercase;
-                letter-spacing: 3px;
-                font-size: 1rem;
-                font-family: "Playfair Display", serif;
-                text-align: center;
-                transition: all 1s ease;
-                border-radius: 5px;
-                &:hover {
-                    background-color: #86100e;
-                    color: #fff;
-                 }
-             }
-      }
-      #resultados-busqueda {
-            width: 80%;
-            height: auto;
-            margin: 20px auto;
-            text-align: center;
-             font-family: "Playfair Display", serif;
-             font-size: 1.1rem;
-             color: #000;
-              line-height: 28px;
-              margin-bottom: 15px;
-              .item-resultado {
-                padding: 10px;
-                border-bottom: 1px solid #00000084;
-                  strong {
-                color: #86100e;
-                font-weight: bold;
-            }
-            small {
-                display: block;
-                margin-top: 10px;
-                color: #00000084;
-            }
-              }
-      }
-    }
-
-    #paso-confirmacion {
-        width: 80%;
-        height: auto;
-        margin: auto;
-        text-align: center;
-        padding: 10px;
-        #txt-familia {
-            font-family: "Playfair Display", serif;
-            letter-spacing: 2px;
-            font-size: 1.5rem;
-            border-bottom: 2px solid #86100e;
-            padding-bottom: 5px;
-            color: #000;
-             line-height: 28px;
-             margin-bottom: 15px;   
-         }
-         #form-rsvp {
-            width: 100%;
-            height: auto;
-            margin: 20px auto;
-            input {
-                width: fit-content;
-                padding: 5px 10px;
-                background-color: #f5ebe0;
-                border: none;
-                border-bottom: 2px solid #86100e;
-                text-transform: uppercase;
-                color: #000;
-                font-family: "Playfair Display", serif;
-                margin-bottom: 15px;
-                transition: all 0.3s ease;
-                &:focus {
-                        outline: none;
-                        border-bottom-color: #f4b9b9;
-         }
-        }
-        .radio-group {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-            flex-wrap: wrap;
-            flex-direction: row;
-            margin-bottom: 15px;
-            label {
-                width: 80%;
-                font-family: "Playfair Display", serif;
-                color: #000;
-                line-height: 28px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                align-content: center;
-                margin: 20px auto;
-                input {
-                    margin-right: 5px;
-                 }
                 }
-        }
-        #seccion-pases {
-            width: 100%;
-            height: auto;
-            margin: auto;
-            label {
-                width: 100%;
-                display: block;
-                text-align: center;
-                margin: 5px auto;
-               font-family: "Great Vibes", cursive;
-                height: auto;
-                color: #86100e;
-                line-height: 28px;
-                font-size: 1.8rem;
             }
-            select {
-                width: fit-content;
-                padding: 5px 10px;
-                background-color: #f5ebe0;
-                border: none;
-                border-bottom: 2px solid #86100e;
-                text-transform: uppercase;
-                color: #000;
-                font-family: "Playfair Display", serif;
-                margin-bottom: 15px;
-                transition: all 0.3s ease;
-                &:focus {
-                        outline: none;
-                        border-bottom-color: #f4b9b9;
-            }
-        }
-    }
-    #btn-enviar {
-        display: block;
-        width: fit-content;
-        margin: 20px auto;
-        padding: 5px 10px;
-        text-decoration: none;
-        color: #86100e;
-        border:1px solid #86100e; 
-        background-color: transparent;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        font-size: 1rem;
-        font-family: "Playfair Display", serif;
-        text-align: center;
-        transition: all 1s ease;
-        border-radius: 5px;
-        &:hover {
-            background-color: #86100e;
-            color: #fff;
-         }
-    }
-}
-    }
 }
 }
 }
  }
 
- @media screen and (min-width: 768px) {
- main {
-    .banner__initial {
-        margin-bottom: 100px;
-        .banner__initial--img {
-            width: 40%;
-            height: auto;
-            img {
-                width: 30%;
-                height: 650px;
-            }
-            img:first-child {
-               object-position: left;
-            }
-            img:nth-child(2) {
-                object-position: center;
-                align-self: start;
-                height: 750px;
-                width: 1280px;
-            }
-            img:nth-child(3) {
-                object-position: right;
-            }
-            .bannner__initial--img--text {
-                position: absolute;
-                font-family: "Great Vibes", cursive;
-                width: 100%;
-                span {
-                    display: block;
-                    font-size: 3rem;
-                    color: #fff;
-                    text-shadow: 0 0 10px #000;
-                    text-align: center;
-                    opacity: 1;
-                    transition: all 0.3s ease;
-                }
-            }
-            .date {
-                display: block;
-                width: 100%;
-                margin: auto;
-                text-align: center;
-                .texto {
-                    font-size: 2rem;
-                }
-                img {
-                    width: 250px;
-                    height: 20px;
-                    margin: auto;
-                }
-            }
+  @media screen and (min-width: 480px) {
+  header {
+    .logo {
+        img {
+            width: 180px;
         }
-        .banner__initial--txt {
-            width: 40%;
-            .texto {
-                font-size: 1.2rem;
-                text-align: center;
-                font-family: "Playfair Display", serif;
-                text-transform: uppercase;
-                line-height: 30px;
-            }
-
+        .flower1 {
+            left: 20px;
+        }
+        .flower2 {
+            right: 20px;
         }
     }
+}
 
-    .winner__info {
-        margin-bottom: 100px;
-      .winner__info--container {
-        .winner__info-item {
-            width: 48%;
-            height: auto;
-            align-self: center;
-            align-items: stretch;
+main {
+    margin-top: 100px;
+    .banner__initial {
+        .banner__initial--img {
+            .flower1 {
+                left: 0;
+            }
+            .flower2 {
+                right: 0;
+            }
+            .Bimg:first-child {
+               width: 30px;
+               background-position: -135px, 1px;
+            }
+            .Bimg:nth-child(2) {
+                object-position: center;
+                align-self: start;
+                height: 450px;
+                width: 220px;
+            }
+            .Bimg:nth-child(3) {
+                width: 30px;
+                background-position:  -370px, 1px;
+            }
         }
-        .winner__img {
-            background-position: 160px;
-            width: 48%;
-            height: 700px;
-            order: 2;
-        }
-        .winner__txt {
-           
-        }
-      }
+    
     }
 
     .program {
-            margin-bottom: 100px;
         .program--container {
-            .program-item {
-                 width: 100%;
-                 img {
-                max-width: 400px;
-                max-height: 400px;
-                margin: auto;
-                 }
-                 .program-list {
-                    width: 100%;
-                    height: auto;
-                    margin: auto;
-                    display: flex;
-                    flex-direction: column;
-
-                    justify-content: center;
-                    align-items: center;
-                    align-content: center;
-                    .list-item {
-                        padding: 10px 15px 10px 15px;
-                        width: 80%;
-                        height: auto;
-                        border-right: 1px solid #00000084;
-                        text-align: right;
-                        position: relative;
-                        i {
-                            font-size: 3.5rem;
-                            color: #000;
-                            text-align: right;
-                            margin: 0;
-                        }
-                        &::before {
-                            content: "";
-                            position: absolute;
-                            top: 0; 
-                           right: -3.7px;
-                            height: 7px;
-                            width: 7px;
-                            border-radius: 100%;
-                            background-color: #000;
-                        }
-                    }
-                 }
-                 .program-item--buttom {
-                    width: 100%;
-                    height: auto;
-                    margin: auto;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    align-content: center;
-                    margin-top: 17px;
-                    a {
-                     border: 2px solid #86100e;
-                     text-decoration: none;
-                     text-transform: uppercase;
-                     letter-spacing: 2px;
-                    color: #000;
-                    font-size: 1rem;
-                    padding: 5px;
-                    transition: all 1s ease;
-                    &:hover {
-                        background-color: #86100e;
-                        color: #fff;
-                    }
-            }
-             i {
-                        font-size: 1rem;   
-                        background: #86100e;
-                        color: #fff;
-                        padding: 8px 5px;
-                    }
-        }
-    }
-}
-}
-
-    .donation {
-        width: 100%;
-        height: auto;
-        margin: 20px auto;
-            .titulo {
-                font-size: 2.5rem;
-                text-align: center;
-                color: #86100e;
-                margin-bottom: 15px;
-            }
-        .donation__container{
-            width: 100%;
-            .donation-item {
-                width: 48%;
-                height: auto;
-                padding: 10px;
-                  &:first-child {
-                    position: relative;
-                 }
-                 &:nth-child(2) {
-                    position: static;
-                 }
+            .program-item:first-child {
                 img {
-                    width: 100%;
-                    height: 300px;
-                    object-fit: cover;
-                    /* El secreto: radios complejos (8 valores) */
-                   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-                    border: 4px solid #000;
-                    box-shadow: -2px -10px 3px 6px #f4b9b9;
+                    width: 180px;
+                    height: 110px;
 
-                }        
-                blockquote {
-                    border-left: 4px solid #86100e;
-                    padding-left: 7px;
-                }
-        }
-    }
-}
-
-.invitation {
-    width: 100%;
-    margin: auto;
-    height: auto;
-    padding: 7px;
-    .titulo {
-        font-family: "Great Vibes", cursive;
-        font-size: 2.3rem;
-        text-align: center;
-        color: #86100e;
-    }
-    .rsvp-container {
-        margin: 20px auto;
-        text-align: center;
-        border: 2px solid #86100e;
-        border-style: dashed;
-        padding: 7px;
-        h2 {
-            font-family: "Great Vibes", cursive;
-             
-            letter-spacing: 2px;
-            font-size: 1.7rem;
-            color: #a06161;
-            margin-bottom: 10px;
-        }
-      #paso-busqueda {
-        p {
-            font-family: "Playfair Display", serif;
-            font-size: 1.1rem;
-            color: #000;
-             line-height: 28px;
-             margin-bottom: 15px;   
-         }
-
-      .search-box {
-            width: 80%;
-            height: auto;
-            margin: auto;
-            input {
-                width: 100%;
-                padding: 5px 10px;
-                background-color: #f5ebe0;
-                border: none;
-                border-bottom: 2px solid #86100e;
-                text-transform: uppercase;
-                color: #000;
-                font-family: "Playfair Display", serif;
-                margin-bottom: 15px;
-                transition: all 0.3s ease;
-                &:focus {
-                        outline: none;
-                        border-bottom-color: #f4b9b9;
+                      &:nth-child(5) {
+                        bottom: 110px;
+                        right: 20px;
+                        height: 130px;
+                        object-position: 0px -40px;
+                        transform: rotate(-12deg);
                     }
-             }
-             button {
-                padding: 5px 10px;
-                text-decoration: none;
-                color: #86100e;
-                border:1px solid #86100e; 
-                background-color: transparent;
-                text-transform: uppercase;
-                letter-spacing: 3px;
-                font-size: 1rem;
-                font-family: "Playfair Display", serif;
-                text-align: center;
-                transition: all 1s ease;
-                border-radius: 5px;
-                &:hover {
-                    background-color: #86100e;
-                    color: #fff;
-                 }
-             }
-      }
-      #resultados-busqueda {
-            width: 80%;
-            height: auto;
-            margin: 20px auto;
-            text-align: center;
-             font-family: "Playfair Display", serif;
-             font-size: 1.1rem;
-             color: #000;
-              line-height: 28px;
-              margin-bottom: 15px;
-              .item-resultado {
-                padding: 10px;
-                border-bottom: 1px solid #00000084;
-                  strong {
-                color: #86100e;
-                font-weight: bold;
-            }
-            small {
-                display: block;
-                margin-top: 10px;
-                color: #00000084;
-            }
-              }
-      }
-    }
-
-    #paso-confirmacion {
-        width: 80%;
-        height: auto;
-        margin: auto;
-        text-align: center;
-        padding: 10px;
-        #txt-familia {
-            font-family: "Playfair Display", serif;
-            letter-spacing: 2px;
-            font-size: 1.5rem;
-            border-bottom: 2px solid #86100e;
-            padding-bottom: 5px;
-            color: #000;
-             line-height: 28px;
-             margin-bottom: 15px;   
-         }
-         #form-rsvp {
-            width: 100%;
-            height: auto;
-            margin: 20px auto;
-            input {
-                width: fit-content;
-                padding: 5px 10px;
-                background-color: #f5ebe0;
-                border: none;
-                border-bottom: 2px solid #86100e;
-                text-transform: uppercase;
-                color: #000;
-                font-family: "Playfair Display", serif;
-                margin-bottom: 15px;
-                transition: all 0.3s ease;
-                &:focus {
-                        outline: none;
-                        border-bottom-color: #f4b9b9;
-         }
-        }
-        .radio-group {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-            flex-wrap: wrap;
-            flex-direction: row;
-            margin-bottom: 15px;
-            label {
-                width: 80%;
-                font-family: "Playfair Display", serif;
-                color: #000;
-                line-height: 28px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                align-content: center;
-                margin: 20px auto;
-                input {
-                    margin-right: 5px;
-                 }
                 }
-        }
-        #seccion-pases {
-            width: 100%;
-            height: auto;
-            margin: auto;
-            label {
-                width: 100%;
-                display: block;
-                text-align: center;
-                margin: 5px auto;
-               font-family: "Great Vibes", cursive;
-                height: auto;
-                color: #86100e;
-                line-height: 28px;
-                font-size: 1.8rem;
             }
-            select {
-                width: fit-content;
-                padding: 5px 10px;
-                background-color: #f5ebe0;
-                border: none;
-                border-bottom: 2px solid #86100e;
-                text-transform: uppercase;
-                color: #000;
-                font-family: "Playfair Display", serif;
-                margin-bottom: 15px;
-                transition: all 0.3s ease;
-                &:focus {
-                        outline: none;
-                        border-bottom-color: #f4b9b9;
-            }
-        }
-    }
-    #btn-enviar {
-        display: block;
-        width: fit-content;
-        margin: 20px auto;
-        padding: 5px 10px;
-        text-decoration: none;
-        color: #86100e;
-        border:1px solid #86100e; 
-        background-color: transparent;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        font-size: 1rem;
-        font-family: "Playfair Display", serif;
-        text-align: center;
-        transition: all 1s ease;
-        border-radius: 5px;
-        &:hover {
-            background-color: #86100e;
-            color: #fff;
-         }
-    }
-}
-    }
 }
 }
 }
