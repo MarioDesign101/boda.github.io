@@ -386,7 +386,7 @@ main {
             align-self: center;
         }
         .winner__img {
-            background-image: url("img/banner2.jpeg");
+            background-image: url("img/banner-fixed.jpeg");
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -593,13 +593,17 @@ main {
                     justify-content: center;
                     align-items: center;
                     align-content: center;
-                    .list-item {
+                   .ward {
+                     .list-item {
                         padding: 10px 15px 10px 15px;
                         width: 80%;
                         height: auto;
                         border-right: 1px solid #00000084;
                         text-align: right;
                         position: relative;
+                        .sub-titulo {
+                            text-align: right;
+                        }
                         i {
                             font-size: 3.5rem;
                             color: #000;
@@ -620,6 +624,7 @@ main {
                             background-color: #000;
                         }
                     }
+                   }
                  }
                  .program-item--buttom {
                     width: 100%;
@@ -1101,8 +1106,8 @@ main {
         .program--container {
             .program-item:first-child {
                 img {
-                    width: 180px;
-                    height: 110px;
+                    width: 200px;
+                    height: 160px;
 
                       &:nth-child(5) {
                         bottom: 110px;
@@ -1113,7 +1118,369 @@ main {
                     }
                 }
             }
+            .program-item {
+                 width: 100%;
+                 .program-list {
+                    width: 100%;
+                    .ward {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        flex-direction: row;
+                        .list-item {
+                            width: 50%;
+                        }
+                        .ward-item {
+                            width: 50%;
+                            height: 100%;
+                        }
+                        &:nth-child(even) {
+                          .list-item {
+                              border-left: 1px solid #000;
+                              text-align: left;
+                              .sub-titulo {
+                                text-align: left;
+                              }
+                              &::before {
+                                left: -3.8px;
+                              }
+                          }
+                        }
+                    }
+                   
+                 }
+                 .program-item--buttom {
+                    width: 100%;
+                    height: auto;
+                    margin: auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+                    margin-top: 17px;
+                    a {
+                     border: 2px solid #86100e;
+                     text-decoration: none;
+                     text-transform: uppercase;
+                     letter-spacing: 2px;
+                    color: #000;
+                    font-size: 1rem;
+                    padding: 5px;
+                    transition: all 1s ease;
+                    &:hover {
+                        background-color: #86100e;
+                        color: #fff;
+                    }
+            }
+             i {
+                        font-size: 1rem;   
+                        background: #86100e;
+                        color: #fff;
+                        padding: 8px 5px;
+                    }
+        }
+    }
 }
 }
+
+    .donation {
+        .donation__container{
+            .donation-item {
+                width: 45%;
+                height: auto;
+                padding: 10px;
+                .mark-photo {
+                    padding: 10px;
+                    background: transparent;
+                    /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 
+                    0 5px 15px rgba(0, 0, 0, 0.2); */
+                    transition: transform 0.3s ease;
+                    &:hover {
+                        transform: scale(1.02);
+                    }
+                    .item-photo {
+                        background-color: #ffffff;
+                        border: 5px solid #2c1d11;   
+                        outline: 3px solid #b89742;
+                        outline-offset: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        img {
+                            display: block;
+                             max-width: 100%;
+                            height: 400px;
+                            max-height: 400px;
+                            object-fit: cover;
+                            box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+                        }
+                    }
+                }
+                  &:first-child {
+                    position: relative;
+                 }
+                 &:nth-child(2) {
+                    position: static;
+                 }  
+                blockquote {
+                    border-left: 4px solid #86100e;
+                    padding-left: 15px;
+                    .modalWindow {
+                        border: none;   
+                        padding: 10px 16px;
+                        text-align: left;
+                        background-color: transparent;
+                        border: 1px solid #86100e;
+                        display: block;
+                        margin: 17px 0;
+                        font-family: "Playfair Display", serif;
+                        text-transform: uppercase;
+                        color: #86100e;
+                        font-size: 1rem;
+                        letter-spacing: 2px;
+                        transition: background-color .3s;
+                        &:hover {
+                            background-color: #86100e;
+                            color: #f5ebe0;
+                        }
+                    }     
+            dialog{   
+            margin: auto;        
+            padding: 24px;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 450px;
+            /* Animación de entrada suave */
+            animation: aparecer 0.3s ease forwards;
+            background-color: #f4b9b9;
+            color: #343230;
+        &::backdrop {
+             background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px); 
+        }
+        p {
+            text-align: center;
+        }
+        .btn-cerrar {
+            display: block;
+            margin: 19px auto;
+            padding: 3px 13px;
+            background-color: #86100e;
+            border-radius: 5px;
+            border: none;
+            color: #f5ebe0;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+        }                    
+                }
+        }
+    }
+}
+
+
+}
+ }
+
+  @media screen and (min-width: 768px) {
+    header {
+        margin-bottom: 120px;
+    .logo {
+        .flower1 {
+            left: 220px;
+        }
+        .flower2 {
+            right: 220px;
+        }
+    }
+}
+
+main {
+    .banner__initial {
+  margin-bottom: 50px;
+        .banner__initial--img {
+            width: 45%;
+            order: 2;
+            align-self: flex-start;
+              .Bimg {
+                height: 500px;
+            }
+            .Bimg:first-child {
+              width: 50px;
+              background-position: -185px 2px;
+            }
+            .Bimg:nth-child(2) {
+               height: 600px;
+               width: 200px;
+            }
+            .Bimg:nth-child(3) {
+               width: 50px;
+               background-position: -438px 0px;
+            }
+        }
+        .banner__initial--txt {
+            width: 45%;
+        }
+    }
+
+    .winner__info {
+      .winner__info--container {
+        .winner__info-item {
+            width: 100%;
+            height: auto;
+            align-self: flex-start;
+        }
+        .winner__img {
+            width: 40%;
+            height: 90dvh;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: -120px 0px;
+            /* aqui me quedé */
+        }
+        .winner__txt {
+            width: 55%;
+            .winner__card--container {
+              gap: 20px;
+            .card-item {
+                width: 40%;
+        }
+            }
+        }
+      }
+    }
+
+    .program {
+        .program--container {
+            .program-item:first-child {
+                max-width: 550px;
+                img {
+                    width: 230px;
+                    height: 180px;
+                    &:first-child {
+                        top: 10px;
+                        right: 15px;
+                        transform: rotate(20deg);
+                    }
+                    &:nth-child(2) {
+                        top: 90px;
+                        left: 50px;
+                        transform: rotate(-10deg);
+                    }
+                       &:nth-child(3) {
+                        top: 190px;
+                        right: 20px;
+                        transform: rotate(15deg);
+                        object-position: top;
+                    }
+                       &:nth-child(4) {
+                        top: 270px;
+                        left: 20px;
+                        transform: rotate(4deg);
+                    }
+                      &:nth-child(5) {
+                        bottom: 30px;
+                        right: 20px;
+                        height: 150px;
+                        object-position: 0px -60px;
+                        transform: rotate(-12deg);
+                    }
+                         &:nth-child(6) {
+                        bottom: 10px;
+                        left: 20px;
+                        height: 140px;
+                        object-position: center;
+                    }
+                }
+            }
+            .program-item {
+                 width: 100%;
+                 position: relative;
+                 height: auto;
+                 overflow: hidden;
+    }
+
+}
+}
+}
+ }
+
+ 
+  @media screen and (min-width: 1024px) {
+main {
+    .banner__initial {
+  margin-bottom: 50px;
+        .banner__initial--img {
+            width: 45%;
+            order: 2;
+            align-self: flex-start;
+              .Bimg {
+                height: 500px;
+            }
+            .Bimg:first-child {
+              width: 80px;
+              background-position: -150px 0px;
+            }
+            .Bimg:nth-child(2) {
+               width: 250px;
+            }
+            .Bimg:nth-child(3) {
+               width: 80px;
+               background-position: -440px 0px;
+            }
+        }
+        .banner__initial--txt {
+            width: 45%;
+        }
+    }
+      .winner__info {
+      .winner__info--container {
+        .winner__info-item {
+            width: 100%;
+            height: auto;
+            align-self: flex-start;
+        }
+        .winner__img {
+            width: 40%;
+            height: 90dvh;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: left;
+            /* aqui me quedé */
+        }
+        .winner__txt {
+            width: 55%;
+            .winner__card--container {
+              gap: 20px;
+            .card-item {
+                width: 40%;
+        }
+            }
+        }
+      }
+    }
+}
+ }
+
+
+  @media screen and (min-width: 1318px) {
+main {
+      .winner__info {
+      .winner__info--container {
+
+        .winner__img {
+            width: 30%;
+            /* aqui me quedé */
+        }
+        .winner__txt {
+            width: 60%;
+        }
+      }
+    }
 }
  }
