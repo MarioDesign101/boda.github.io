@@ -135,8 +135,9 @@ formRsvp.addEventListener('submit', (e) => {
     msgFinal.style.display = 'block';
     msgFinal.innerHTML = `
       <div class="success-box">
-        <h3>¡Tu asistencia ha sido registrada!</h3>
-        <p>Gracias por actualizar tus datos. Nos vemos muy pronto en este gran día.</p>
+        <h3>¡Hemos recibido tu registro!</h3>
+        <p>Gracias por actualizar tus datos.</p>
+        <p><strong>Estos boletos son intransferibles. En caso de que sus circunstancias cambien, encomiamos a que manden mensaje personal al novio o a la novia. <br> No se aceptará a cualquiera que no se encuentre en la lista de invitados. Gracias por su atención.</strong></p>
       </div>`;
   })
   .catch(err => {

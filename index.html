@@ -10,6 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Pinyon+Script&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <audio id="musica-boda" src="A Thousand Years.mp3" loop></audio>
+
+<button id="btn-musica" class="music-floater" aria-label="Reproducir música">
+  <svg id="icon-play" viewBox="0 0 24 24" width="24" height="24">
+    <path fill="currentColor" d="M8 5v14l11-7z"/>
+  </svg>
+  <svg id="icon-pause" viewBox="0 0 24 24" width="24" height="24" style="display: none;">
+    <path fill="currentColor" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+  </svg>
+</button>
+
     <header>
         <div class="logo">
             <img src="img/logo.png" alt="">
@@ -119,8 +131,11 @@
                     <img src="img/collage/WhatsApp Image 2026-06-14 at 22.05.35 (3).jpeg" alt="">
                 </div>
                 <div class="program-item">
-                     <div class="flower3 flower_picture"></div>
-                      <div class="flower3 flower_picture2"></div>
+                     <div class="flower3"></div>
+                      <div class="flower3"></div>
+                      <div class="flower3"></div>
+                      <div class="flower3"></div>
+                      <div class="flower3"></div>
                     <h3 class="sub-titulo">Itinerario</h3>
                     <div class="program-list">
                        <div class="ward">
@@ -221,7 +236,13 @@ Para quienes deseen obsequiarnos algo y les sea más cómodo hacerlo así, habil
                 <button class="modalWindow" id="openModal">Obsequio con Cariño</button>
           <dialog id="miModal">
               <h2 class="titulo">¿Deseas hacer un regalo?</h2>
-              <p class="texto">Este mensaje está dentro de una etiqueta <code>&lt;dialog&gt;</code>. Es genial porque maneja la accesibilidad y el enfoque del teclado automáticamente.</p>
+              <p class="texto">
+                Esta es una opción para la comodidad de los que desean hacer un pequeño detalle. Agradecemos mucho la generosidad y bondad de aquellos que ponen "su granito de arena" para ayudarnos en esta nueva faceta
+                <br> <br>
+                <strong>Num. Cuenta BBVA:</strong> 151 687 8643 <br><br>
+                <strong>Cuenta CLABE:</strong> 012 180 01516878643 1 <br><br>
+                <i>Concepto: A nombre de Mario Alberto Álvarez Martínez y Damaris Agonizante Vazquez</i>
+              </p>
                <button class="btn-cerrar texto" id="closeModal">Cerrar</button>
            </dialog>
                 </blockquote>
@@ -276,5 +297,6 @@ Para quienes deseen obsequiarnos algo y les sea más cómodo hacerlo así, habil
         <script src="script.js"></script>   
         <script src="check.js"></script>
         <script src="modal.js"></script>
+        <script src="music.js"></script>
 </body>
 </html>
