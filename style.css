@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Titan+One&display=swap');
 
+
 * {
     margin: 0;
     padding: 0;
@@ -935,6 +936,135 @@ main {
         }
     }
 }
+
+.dress-code {
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    .dress-code__container {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .dress-code__title {
+    font-family: "Great Vibes", cursive;
+    font-size: 3.5rem;
+    color: #b38f4f; /* Dorado elegante */
+    margin-bottom: 5px;
+  }
+
+    .dress-code__subtitle {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 25px;
+  }
+
+  .dress-code__intro {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+
+  .dress-code__rules {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  /* Tarjetas de estilo novedoso/galería */
+  .dress-code__card {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: left;
+    gap: 25px;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+
+  /* Contenedores de las muestras de color circular */
+  .dress-code__swatches {
+    display: flex;
+    gap: -10px; /* Hace que se encimen ligeramente un círculo con otro */
+    
+    .dress-code__swatch:nth-child(2) {
+      margin-left: -15px; /* Efecto overlap moderno */
+    }
+  }
+
+  .dress-code__swatch {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.15);
+
+    .dress-code__swatch--white {
+      background-color: #ffffff;
+      border: 1px solid #e0e0e0;
+    }
+
+    .dress-code__swatch--pink {
+      background-color: #f3c1c6; /* Rosa palo / Dusty Pink */
+    }
+
+    .dress-code__swatch--wine {
+      background-color: #86100e; /* Vino profundo / Burgundy */
+    }
+  }
+
+  .dress-code__info {
+    h3 {
+      font-size: 1.1rem;
+      margin: 0 0 5px 0;
+      color: #333;
+      letter-spacing: 1px;
+    }
+    p {
+      font-size: 0.95rem;
+      margin: 0;
+      color: #555;
+      line-height: 1.4;
+      
+      strong {
+        color: #86100e;
+      }
+    }
+  }
+
+  .dress-code__footer {
+    font-family: "Great Vibes", cursive;
+    font-size: 2rem;
+    color: #86100e;
+    margin-top: 30px;
+    border-bottom: 1px solid #570706;
+    padding-bottom: 20px;
+  }
+}
+
+/* Adaptación para pantallas móviles */
+@media (max-width: 480px) {
+  .dress-code__card {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px;
+    gap: 15px;
+  }
+  .dress-code__swatches {
+    justify-content: center;
+  }
+}
+
 
 .invitation {
     width: 100%;
