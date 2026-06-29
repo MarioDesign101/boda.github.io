@@ -875,7 +875,7 @@ main {
                         &:hover {
                             background-color: #86100e;
                             color: #f5ebe0;
-                            box-shadow: 0px 0px 0px 8px #86100ea2;
+                            box-shadow: 8px 10px 10px 4px #86100ea2;
                         }
                     }     
             dialog{   
