@@ -862,19 +862,20 @@ main {
                         border: none;   
                         padding: 10px 16px;
                         text-align: left;
-                        background-color: transparent;
+                        background-color: #86100e;
                         border: 1px solid #86100e;
                         display: block;
                         margin: 17px 0;
                         font-family: "Playfair Display", serif;
                         text-transform: uppercase;
-                        color: #86100e;
+                        color: #f5ebe0;
                         font-size: 1rem;
                         letter-spacing: 2px;
                         transition: background-color .3s;
                         &:hover {
                             background-color: #86100e;
                             color: #f5ebe0;
+                            box-shadow: 0px 0px 0px 8px #86100ea;
                         }
                     }     
             dialog{   
