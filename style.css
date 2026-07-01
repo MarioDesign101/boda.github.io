@@ -1,5 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Titan+One&display=swap');
 
+    .whatsapp-tooltip {
+        background-color: #f0f0f0;
+        color: #333;
+        padding: 12px 18px;
+        border-radius: 15px;
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        margin-bottom: 15px;
+        max-width: 200px;
+        font-size: 14px;
+        line-height: 1.4;
+        position: relative;
+        opacity: 0; /* Oculta inicialmente */
+        visibility: hidden;
+        transition: opacity 0.5s, visibility 0.5s; /* Animación de aparición */
+    }
+
+    .whatsapp-tooltip::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        right: 25px;
+        border-width: 10px 10px 0;
+        border-style: solid;
+        border-color: #f0f0f0 transparent transparent;
+        display: block;
+        width: 0;
+    }
+
+    .whatsapp-tooltip.show {
+        opacity: 1;
+        visibility: visible;
+    }
 
 * {
     margin: 0;
@@ -858,26 +891,62 @@ main {
                 blockquote {
                     border-left: 4px solid #86100e;
                     padding-left: 7px;
-                    .modalWindow {
-                        border: none;   
-                        padding: 10px 16px;
-                        text-align: left;
-                        background-color: #86100e;
-                        border: 1px solid #86100e;
-                        display: block;
-                        margin: 17px 0;
-                        font-family: "Playfair Display", serif;
-                        text-transform: uppercase;
-                        color: #f5ebe0;
-                        font-size: 1rem;
-                        letter-spacing: 2px;
-                        transition: background-color .3s;
-                        &:hover {
-                            background-color: #86100e;
-                            color: #f5ebe0;
-                            box-shadow: 8px 10px 10px 4px #86100ea2;
-                        }
-                    }     
+                    
+    .btn-3d-container {
+    margin: 20px auto;
+      position: relative;
+      display: inline-block;
+      background: #570b0a; /* Color de la sombra/profundidad (Indigo oscuro) */
+      border-radius: 12px;
+      padding: 0;
+      cursor: pointer;
+      outline-offset: 4px;
+      transition: filter 250ms;
+      border: none;
+    }
+
+    /* La cara frontal del botón */
+    .btn-3d-content {
+      display: block;
+      position: relative;
+      width: fit-content;
+      padding: 10px 20px;
+      border-radius: 12px;
+      margin: auto;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: white;
+      background: #86100e; /* Color principal (Indigo brillante) */
+      /* Este transform inicial lo eleva para crear el espacio 3D */
+      transform: translateY(-6px);
+      will-change: transform;
+      transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+    }
+
+    /* --- EFECTOS HOVER Y ACTIVOS --- */
+
+    /* Al pasar el cursor, aumentamos el brillo sutilmente */
+    .btn-3d-container:hover {
+      filter: brightness(1.1);
+    }
+
+    /* Al hacer hover, el botón sube un poco más, haciéndose más "alto" */
+    .btn-3d-container:hover .btn-3d-content {
+      transform: translateY(-8px);
+      transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+    }
+
+    /* Al hacer clic (active), el botón bajan casi por completo contra la base */
+    .btn-3d-container:active .btn-3d-content {
+      transform: translateY(-2px);
+      transition: transform 34ms;
+    }
+
+    /* Evita que se pierda el foco visual al usar el teclado */
+    .btn-3d-container:focus:not(:focus-visible) {
+      outline: none;
+    }
+                    
             dialog{   
             margin: auto;        
             padding: 24px;
@@ -1562,25 +1631,8 @@ main {
                 blockquote {
                     border-left: 4px solid #86100e;
                     padding-left: 15px;
-                    .modalWindow {
-                        border: none;   
-                        padding: 10px 16px;
-                        text-align: left;
-                        background-color: transparent;
-                        border: 1px solid #86100e;
-                        display: block;
-                        margin: 17px 0;
-                        font-family: "Playfair Display", serif;
-                        text-transform: uppercase;
-                        color: #86100e;
-                        font-size: 1rem;
-                        letter-spacing: 2px;
-                        transition: background-color .3s;
-                        &:hover {
-                            background-color: #86100e;
-                            color: #f5ebe0;
-                        }
-                    }     
+                   
+                       
             dialog{   
             margin: auto;        
             padding: 24px;

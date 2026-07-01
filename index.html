@@ -12,8 +12,10 @@
 <body>
 
     <audio id="musica-boda" src="A Thousand Years.mp3" loop></audio>
-
 <button id="btn-musica" class="music-floater" aria-label="Reproducir música">
+      <div class="whatsapp-tooltip" id="whatsapp-tooltip">
+        Reproduceme
+    </div>
   <svg id="icon-play" viewBox="0 0 24 24" width="24" height="24">
     <path fill="currentColor" d="M8 5v14l11-7z"/>
   </svg>
@@ -178,7 +180,7 @@
                         <div class="ward">
                             <article class="list-item">
                             <i class="fa-solid fa-microphone"></i>
-                            <h4 class="sub-titulo">De parte de los novios... <br> 5:20 p.m</h4>
+                            <h4 class="sub-titulo">De parte los novios... <br> 5:20 p.m</h4>
                             <hr>
                             <p class="texto-mini" style="color: #777;">Deseamos hacernos un regalo del uno para el otro de uno de nuestros hobbies preferidos.</p>
                         </article>
@@ -222,10 +224,10 @@
   <div class="dress-code__container">
     
     <h2 class="dress-code__title">Código de Vestimenta</h2>
-    <p class="dress-code__subtitle">Etiqueta</p>
+    <p class="dress-code__subtitle">Formal</p>
     
     <p class="dress-code__intro">
-      Queremos que luzcas espectacular en nuestro día. Por ello, te compartimos los detalles para mantener la armonía del evento:
+      Queremos que luzcas espectacular en nuestro día. Además que sabemos que todos gustarán destacar su vestimenta por ser "modesta y de buen juicio" (1Timoteo 2:9). Por ello, te compartimos los detalles para mantener la armonía del evento:
     </p>
 
     <div class="dress-code__rules">
@@ -246,6 +248,17 @@
         <div class="dress-code__info">
           <h3>Rosas y Vinos</h3>
           <p>Paleta de colores <strong>reservada para las damas de honor</strong>.</p>
+        </div>
+      </div>
+
+        <div class="dress-code__card dress-code__card--bridesmaids">
+        <div class="dress-code__swatches">
+          <div class="dress-code__swatch dress-code__swatch--pink" style="background-color: #a9806d;"></div>
+          <div class="dress-code__swatch dress-code__swatch--wine" style="background-color: #86100e;"></div>
+        </div>
+        <div class="dress-code__info">
+          <h3>Café arenoso y Vino</h3>
+          <p>Paleta de colores <strong>del traje del novio</strong>.</p>
         </div>
       </div>
 
@@ -271,7 +284,11 @@
                     <p class="texto"><cite>"¡Gracias por acompañarnos en el inicio de esta aventura! Su presencia y cariño son el regalo más grande que podemos recibir.
 Para quienes deseen obsequiarnos algo y les sea más cómodo hacerlo así, habilitamos esta opción. De igual forma, Nosotros amamos los detalles en especie y los recibiremos con muchísima ilusión el día de la boda. Sepan que su compañía ya llena nuestro corazón por completo."</cite></p>
                 <!-- ventana modal de más información -->
-                <button class="modalWindow" id="openModal">Obsequio con Cariño</button>
+                <button class="btn-3d-container">
+                <span class="btn-3d-content modalWindow" id="openModal">
+                      Obsequio con cariño
+                </span>
+                </button>
           <dialog id="miModal">
               <h2 class="titulo">¿Deseas hacer un regalo?</h2>
               <p class="texto">
@@ -336,5 +353,6 @@ Para quienes deseen obsequiarnos algo y les sea más cómodo hacerlo así, habil
         <script src="check.js"></script>
         <script src="modal.js"></script>
         <script src="music.js"></script>
+        <script src="wh.js"></script>
 </body>
 </html>
