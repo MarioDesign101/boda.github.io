@@ -11,18 +11,20 @@
 </head>
 <body>
 
-    <audio id="musica-boda" src="A Thousand Years.mp3" loop></audio>
-<button id="btn-musica" class="music-floater" aria-label="Reproducir música">
-      <div class="whatsapp-tooltip" id="whatsapp-tooltip">
-        Reproduceme
-    </div>
-  <svg id="icon-play" viewBox="0 0 24 24" width="24" height="24">
-    <path fill="currentColor" d="M8 5v14l11-7z"/>
-  </svg>
-  <svg id="icon-pause" viewBox="0 0 24 24" width="24" height="24" style="display: none;">
-    <path fill="currentColor" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
-  </svg>
-</button>
+<audio id="musica-boda" src="A Thousand Years.mp3" loop></audio>
+
+<div class="music-container">
+  <div id="tooltip-musica" class="music-tooltip">¡Reprodúceme!</div>
+  
+  <button id="btn-musica" class="music-floater" aria-label="Reproducir música">
+    <svg id="icon-play" viewBox="0 0 24 24" width="24" height="24">
+      <path fill="currentColor" d="M8 5v14l11-7z"/>
+    </svg>
+    <svg id="icon-pause" viewBox="0 0 24 24" width="24" height="24" style="display: none;">
+      <path fill="currentColor" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+    </svg>
+  </button>
+</div>
 
     <header>
         <div class="logo">

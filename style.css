@@ -1,38 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Titan+One&display=swap');
 
-    .whatsapp-tooltip {
-        background-color: #f0f0f0;
-        color: #333;
-        padding: 12px 18px;
-        border-radius: 15px;
-        border: 1px solid #ddd;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-        margin-bottom: 15px;
-        max-width: 200px;
-        font-size: 14px;
-        line-height: 1.4;
-        position: relative;
-        opacity: 0; /* Oculta inicialmente */
-        visibility: hidden;
-        transition: opacity 0.5s, visibility 0.5s; /* Animación de aparición */
-    }
-
-    .whatsapp-tooltip::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        right: 25px;
-        border-width: 10px 10px 0;
-        border-style: solid;
-        border-color: #f0f0f0 transparent transparent;
-        display: block;
-        width: 0;
-    }
-
-    .whatsapp-tooltip.show {
-        opacity: 1;
-        visibility: visible;
-    }
 
 * {
     margin: 0;
@@ -139,13 +106,58 @@ body {
 }
 
 /* Botón Flotante */
-.music-floater {
+
+
+/* Contenedor fijo */
+.music-container {
   position: fixed;
   bottom: 20px;
   right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Letrero flotante (Tooltip) */
+.music-tooltip {
+  position: absolute;
+  bottom: 65px; /* Lo posiciona justo arriba del botón */
+  background-color: #333333;
+  color: #ffffff;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 20px;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  animation: flotarLetrero 2s ease-in-out infinite;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Pequeña flecha del letrero */
+.music-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #333333 transparent transparent transparent;
+}
+
+/* Animación de flotado para el letrero */
+@keyframes flotarLetrero {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Botón Circular */
+.music-floater {
   width: 50px;
   height: 50px;
-  background-color: #eb8787; /* Color dorado/elegante */
+  background-color: #86100e;
   color: #ffffff;
   border: none;
   border-radius: 50%;
@@ -154,32 +166,23 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  z-index: 9999; /* Asegura que esté por encima de todo */
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .music-floater:hover {
   transform: scale(1.1);
-  background-color: #eb8787;
+  background-color: #3f0605;
 }
 
-/* Animación opcional cuando la música esté activa (reproduciendo) */
 .music-floater.playing {
   animation: pulse-gold 2s infinite;
 }
 
 @keyframes pulse-gold {
-  0% {
-    box-shadow: 0 0 0 0 rgba(179, 143, 79, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(179, 143, 79, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(179, 143, 79, 0);
-  }
+  0% { box-shadow: 0 0 0 0 #86100e74; }
+  70% { box-shadow: 0 0 0 10px rgba(179, 143, 79, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(179, 143, 79, 0); }
 }
-
 
 /* ---------------------------------- */
 
