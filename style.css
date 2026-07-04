@@ -1235,6 +1235,20 @@ main {
                 margin-top: 10px;
                 color: #00000084;
             }
+                      span.btn-select {
+                background-color: #86100ea1;
+                color: #fff;
+                padding: 5px 10px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                display: inline-block;
+                margin-top: 10px;
+                &:hover {
+                    background-color: #86100e;
+                }
+            }
               }
       }
     }
