@@ -1249,6 +1249,13 @@ main {
                     background-color: #86100e;
                 }
             }
+                   .invitado-info {
+                span {
+                    display: block;
+                    margin-top: 5px;
+                    width: 100%;
+                }
+            }
               }
       }
     }
